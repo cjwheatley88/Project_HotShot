@@ -1,54 +1,65 @@
+import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Requires a means to searhch for a game code
-// and join the game if it exists
-// This is a placeholder for the actual game joining logic
-
 export default function JoinGame() {
-  const [gameCode, setGameCode] = useState('');
-  // eslint-disable-next-line
-  const [userName, setUserName] = useState('');
+  const [gameCode, setGameCode] = useState(''); // State for the game code input
+  const [gameListItems, setGameListItems] = useState([]); // State for the list of game IDs
+  const [showGameList, setShowGameList] = useState(false); // State to toggle game list visibility
   const navigate = useNavigate();
 
-  const handleJoin = (e) => {
-    e.preventDefault();
-    if (gameCode.trim() !== '' && gameCode.trim() === 'test') {
-      setGameCode('test');
-      console.log('Joining game with code:', gameCode);
-    
-      //use prompt to capture user name
-      const name = prompt('Enter your name:');
-      if (name) {
-        setUserName(name);
-        console.log('User name:', name);
-      } else {
-        console.error('User name is required');
-        return;
-      }
-
-      //navigate to the game page
-      navigate(`/play/${gameCode}`, { state: { userName: name } });
-
+  const fetchGameList = () => {
+    if (showGameList) {
+      setShowGameList(false); // Hide the game list
     } else {
-      console.error('Invalid game code:', gameCode);
-      //Flash button to red briefly
+      axios
+        .get('http://localhost:8080/routes/game')
+        .then((response) => {
+          const gameIds = response.data;
+          setGameListItems(
+            gameIds.map((gameId) => <li key={gameId}>{gameId}</li>)
+          );
+          setShowGameList(true); // Show the game list
+        })
+        .catch((error) => {
+          console.error('Error fetching game list:', error);
+        });
     }
   };
 
+  const handleJoin = (e) => {
+    e.preventDefault();
+    if (gameCode.trim() !== '') {
+        navigate(`/play/${gameCode}`); // Navigate to the game page
+    } else {
+      console.error('Invalid game code');
+    }
+  };
+
+  const listEnterGame = (e) => {
+    const selectedGameCode = e.target.innerText; // Get the selected game code from the list
+    setGameCode(selectedGameCode); // Set the game code state
+    setShowGameList(false); // Hide the game list
+  }
+
   return (
     <div className="page">
-      <h2>🎮 Join a Game</h2>
+      <h2>🎮 Join a Game?</h2>
       <form onSubmit={handleJoin} className="form">
+      <button type="submit">Join Game</button>
         <input
           type="text"
           placeholder="Enter Game Code"
           value={gameCode}
-          onChange={(e) => setGameCode(e.target.value)}
+          onChange={(e) => setGameCode(e.target.value)} // Update gameCode state
           className="input"
         />
-        <button type="submit">Join Game</button>
+        <p>Or</p>
+        <button type="button" onClick={fetchGameList}>Browse Games</button>
       </form>
+      <div className="game-list">
+        {showGameList && <ul onClick={listEnterGame}>{gameListItems}</ul>} {/* Render game list if visible */}
+      </div>
     </div>
   );
 }

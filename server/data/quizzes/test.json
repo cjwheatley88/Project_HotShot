@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What is the process by which plants make their own food?",
+        "options": ["Photosynthesis", "Respiration", "Transpiration", "Osmosis"],
+        "answer": "Photosynthesis"
+    },
+    {
+        "question": "Which part of the plant is responsible for absorbing water and nutrients from the soil?",
+        "options": ["Roots", "Stem", "Leaves", "Flowers"],
+        "answer": "Roots"
+    }
+]

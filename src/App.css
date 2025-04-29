@@ -73,3 +73,36 @@ button:hover {
   background-color: #6200ea;
   color: white;
 }
+
+/* Style for lists */
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff;
+  color: #6200ea;
+  padding: 10px 15px;
+  margin: 5px 200px;
+  border: 2px solid #6200ea;
+  border-radius: 8px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+li:hover {
+  background-color: #e0d7f5;
+  cursor: pointer;
+}
+
+.homeButton {
+  background-color: #a000ea;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}

@@ -60,3 +60,6 @@ This project is licensed under the [License Name] License. See the `LICENSE` fil
 ## Contact
 
 For questions or feedback, please contact [Your Name] at [Your Email].
+
+## Server side
+port: 8080

@@ -1,0 +1,27 @@
+[
+    {
+        "question": "What are the three sports included in a triathlon?",
+        "options": ["Swimming, Cycling, Running", "Swimming, Cycling, Hiking", "Rowing, Cycling, Running", "Swimming, Rowing, Running"],
+        "answer": "Swimming, Cycling, Running"
+    },
+    {
+        "question": "In what order are the events typically performed in a triathlon?",
+        "options": ["Swimming, Cycling, Running", "Cycling, Running, Swimming", "Running, Swimming, Cycling", "Cycling, Swimming, Running"],
+        "answer": "Swimming, Cycling, Running"
+    },
+    {
+        "question": "Which triathlete is known for winning the Ironman World Championship a record 8 times?",
+        "options": ["Mark Allen", "Jan Frodeno", "Dave Scott", "Alistair Brownlee"],
+        "answer": "Dave Scott"
+    },
+    {
+        "question": "Who was the first woman to win three consecutive Ironman World Championships?",
+        "options": ["Paula Newby-Fraser", "Chrissie Wellington", "Mirinda Carfrae", "Daniela Ryf"],
+        "answer": "Chrissie Wellington"
+    },
+    {
+        "question": "What is the primary purpose of wearing a wetsuit during the swimming portion of a triathlon?",
+        "options": ["To keep warm", "To reduce drag and improve buoyancy", "To protect from jellyfish", "To look professional"],
+        "answer": "To reduce drag and improve buoyancy"
+    }
+]

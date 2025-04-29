@@ -1,0 +1,27 @@
+[
+    {
+        "question": "What is the largest desert in Africa?",
+        "options": ["Sahara", "Kalahari", "Namib", "Gobi"],
+        "answer": "Sahara"
+    },
+    {
+        "question": "Which African country is known as the 'Rainbow Nation'?",
+        "options": ["South Africa", "Kenya", "Nigeria", "Egypt"],
+        "answer": "South Africa"
+    },
+    {
+        "question": "What is the longest river in Africa?",
+        "options": ["Nile", "Congo", "Zambezi", "Limpopo"],
+        "answer": "Nile"
+    },
+    {
+        "question": "Which African country has the most pyramids?",
+        "options": ["Sudan", "Egypt", "Ethiopia", "Libya"],
+        "answer": "Sudan"
+    },
+    {
+        "question": "What is the highest mountain in Africa?",
+        "options": ["Mount Kilimanjaro", "Mount Kenya", "Mount Meru", "Ras Dashen"],
+        "answer": "Mount Kilimanjaro"
+    }
+]

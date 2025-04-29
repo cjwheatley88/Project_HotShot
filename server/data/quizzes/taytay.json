@@ -1,0 +1,27 @@
+[
+        {
+            "question": "What is Taylor Swift's middle name?",
+            "options": ["Alison", "Marie", "Elizabeth", "Anne"],
+            "answer": "Alison"
+        },
+        {
+            "question": "Which album features the song 'Love Story'?",
+            "options": ["Fearless", "Red", "1989", "Speak Now"],
+            "answer": "Fearless"
+        },
+        {
+            "question": "What year did Taylor Swift release her debut album?",
+            "options": ["2004", "2006", "2008", "2010"],
+            "answer": "2006"
+        },
+        {
+            "question": "Which song features the lyrics 'Cause you were Romeo, you were throwing pebbles'?",
+            "options": ["Love Story", "You Belong with Me", "Teardrops on My Guitar", "Fifteen"],
+            "answer": "Love Story"
+        },
+        {
+            "question": "What is the name of Taylor Swift's cat?",
+            "options": ["Olivia", "Meredith", "Benjamin", "Diana"],
+            "answer": "Olivia"
+        }
+    ]
