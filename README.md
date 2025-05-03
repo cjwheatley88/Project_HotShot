@@ -1,6 +1,6 @@
 # Hot Shot
 
-Hot Shot is a cutting-edge application designed to [briefly describe the purpose of your application].
+Hot Shot is an application designed to [briefly describe the purpose of your application].
 
 ## Features
 
